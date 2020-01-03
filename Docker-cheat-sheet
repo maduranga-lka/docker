@@ -29,4 +29,4 @@ docker logs 5b6efa08e4b6
 
 docker exec -it <container> <command>
 docker exec -it 5b6efa01234b6 redis-cli
-docker exec -it 5b6efa01234b6 bash
+docker exec -it 5b6efa01234b6 bash  [bash | powershell | zsh | sh]
