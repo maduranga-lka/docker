@@ -17,7 +17,6 @@ run docker run -it --rm -p 8889:8080 tomcat for another instance
 docker container create --publish 8082:8080 --name my-tomcat-container tomcat
 docker container ls
 docker container start 8b7fe470cba5f1d4e3d3d7e53b86ff3fb8dff73267352c2ceebe006e3d832ee1
-docker exec -it my-tomcat-container /bin/bash
 docker container kill 8b7fe470cba5f1d4e3d3d7e53b86ff3fb8dff73267352c2ceebe006e3d832ee1 ( If issue stop, it will do additional works before shutting down)
 
 ~Remove all the Containers~
@@ -26,5 +25,8 @@ docker remove prune
 ~To see Container Logs~
 docker logs 5b6efa08e4b6 
 
+~Go inside of a Container / Run Commands inside of a Container~
 
-
+docker exec -it <container> <command>
+docker exec -it 5b6efa01234b6 redis-cli
+docker exec -it 5b6efa01234b6 bash
