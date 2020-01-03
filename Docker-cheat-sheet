@@ -1,4 +1,20 @@
+~Usefull Links~
+
 https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/
+https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
+https://medium.com/@pra4mesh/deploy-war-in-docker-tomcat-container-b52a3baea448
+https://towardsdatascience.com/15-docker-commands-you-should-know-970ea5203421
+
+~Getting Tomcat from Docker Hub~
 
 docker login --username=username
+docker pull tomcat
+docker run -it --rm -p 8888:8080 tomcat
+
+~Creating a container and Work with it~
+
+docker container create --publish 8082:8080 --name my-tomcat-container tomcat
+docker container ls
+docker container start 8b7fe470cba5f1d4e3d3d7e53b86ff3fb8dff73267352c2ceebe006e3d832ee1
+docker exec -it my-tomcat-container /bin/bash
 
