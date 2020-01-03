@@ -18,7 +18,7 @@ docker container create --publish 8082:8080 --name my-tomcat-container tomcat
 docker container ls
 docker container start 8b7fe470cba5f1d4e3d3d7e53b86ff3fb8dff73267352c2ceebe006e3d832ee1
 docker exec -it my-tomcat-container /bin/bash
-docker container kill 8b7fe470cba5f1d4e3d3d7e53b86ff3fb8dff73267352c2ceebe006e3d832ee1
+docker container kill 8b7fe470cba5f1d4e3d3d7e53b86ff3fb8dff73267352c2ceebe006e3d832ee1 ( If issue stop, it will do additional works before shutting down)
 
 ~Remove all the Containers~
 docker remove prune
