@@ -23,5 +23,8 @@ docker container kill 8b7fe470cba5f1d4e3d3d7e53b86ff3fb8dff73267352c2ceebe006e3d
 ~Remove all the Containers~
 docker remove prune
 
+~To see Container Logs~
+docker logs 5b6efa08e4b6 
+
 
 
