@@ -1,4 +1,4 @@
 https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/
 
-docker login --username=username --email=email@email.com
+docker login --username=username
 
