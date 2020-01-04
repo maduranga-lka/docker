@@ -30,3 +30,19 @@ docker logs 5b6efa08e4b6
 docker exec -it <container> <command>
 docker exec -it 5b6efa01234b6 redis-cli
 docker exec -it 5b6efa01234b6 bash  [bash | powershell | zsh | sh]
+
+docker exec -ti d95ba4e5a459 ss -tln
+
+~Check App is working inside the Container~
+
+docker exec -it d95ba4e5a459 bash
+wget http://localhost:8080
+
+~Check Docker Conainer IP address~
+
+docker container inspect d95ba4e5a459 | grep -i ipaddress
+
+~Check Real time COntainer Stats~
+
+docker stats d95ba4e5a459  
+Docker inspect d95ba4e5a459
