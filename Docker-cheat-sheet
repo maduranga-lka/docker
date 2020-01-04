@@ -47,3 +47,10 @@ docker container inspect d95ba4e5a459 | grep -i ipaddress
 
 docker stats d95ba4e5a459  
 Docker inspect d95ba4e5a459
+
+~ Building New Docker File ~
+
+docker build -t maduranga/redis:1.0.0 .
+
+~ Pushing to a Docker Registry ~
+docker push maduranga/redis:1.0.0
