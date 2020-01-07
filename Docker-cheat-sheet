@@ -54,3 +54,12 @@ docker build -t maduranga/redis:1.0.0 .
 
 ~ Pushing to a Docker Registry ~
 docker push maduranga/redis:1.0.0
+
+~To run Docker Compose~
+docker-compose up
+
+~To Rebuild and run Docker cCompose~
+docker-compose up --build
+
+~TO remove and Stop ~
+docker-compose down
