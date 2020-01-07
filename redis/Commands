@@ -1,1 +1,2 @@
 docker push maduranga/redis:tagname
+docker run --name my_redis -d maduranga/redis:1.0.0
