@@ -67,3 +67,6 @@ docker-compose down
 ~Build Specific Docker File~
 docker build -f Dockerfile.dev .
 
+~Run Docker File with Reference to Local Project Files~
+docker run -p 3000:3000 -v app/spring -v $(pwd):/app 68dabe9a318e
+
