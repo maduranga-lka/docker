@@ -63,3 +63,7 @@ docker-compose up --build
 
 ~TO remove and Stop ~
 docker-compose down
+
+~Build Specific Docker File~
+docker build -f Dockerfile.dev
+
