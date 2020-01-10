@@ -59,13 +59,20 @@ docker push maduranga/redis:1.0.0
 docker-compose up
 
 ~To Rebuild and run Docker cCompose~
-docker-compose up --build
-
+docker-compose up --build 
 ~TO remove and Stop ~
 docker-compose down
 
-~Build Specific Docker File~
-docker build -f Dockerfile.dev .
+# ~Build Specific Docker File~
+docker build -f Dockerfile.my-service.development .
+
+When using docker compose "context" attribute to be addded
+eg.
+services:
+  my-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.my-service.development
 
 ~Run Docker File with Reference to Local Project Files~
 docker run -p 3000:3000 -v app/spring -v $(pwd):/app 68dabe9a318e
