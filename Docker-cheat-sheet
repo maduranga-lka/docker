@@ -88,3 +88,25 @@ services:
 
 ~Travis Example~
 https://sivalabs.in/2018/01/ci-cd-springboot-applications-using-travis-ci/
+
+*********************************************************************************************
+
+docker run jboss/wildfly
+docker container run -d -p 8080:8080 jboss/wildfly
+
+docker container run -d -p 8080:8080 -v `pwd`/sp.war:/opt/jboss/wildfly/standalone/deployments/sp.war jboss/wildfly
+
+~Push a RUnning Container~
+
+docker container commit d433ecc85384 maduranga/wildfly:1.0 
+docker push maduranga/wildfly:1.0 
+
+**************************Dockerfile****************************
+FROM jboss/wildfly
+ADD simple.war /opt/jboss/wildfly/standalone/deployments/
+***********************************************************
+
+
+docker build --tag=maduranga/war-on-wildfly .
+
+docker container run -d -p 8080:8080 maduranga/war-on-wildfly
