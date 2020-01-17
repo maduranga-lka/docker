@@ -110,3 +110,18 @@ ADD simple.war /opt/jboss/wildfly/standalone/deployments/
 docker build --tag=maduranga/war-on-wildfly .
 
 docker container run -d -p 8080:8080 maduranga/war-on-wildfly
+
+~Remove all the images >  docker image ls -aq (all quite)~
+
+docker image -rm -f $(docker image ls -aq)
+
+~Remove all the containers docker container ls -aq~
+docker containers -rm -f $(docker containers ls -aq)
+
+
+~Create a local registry~
+docker run -d -p 5000:5000 --restart always --name registry registry:2.6.0
+
+docker image tag maduranga/wildfly localhost:5000/maduranga:latest
+
+docker image push localhost:5000/maduranga:latest
